@@ -39,7 +39,7 @@
 
 首先想到的是将`lubancat`的`dts`迁移到这里，但是`lubancat`的`dts`最新的也是`5.10`，与`6.6`差异较大，并且不确定`dts`背后对应的驱动是否还支持这些关键字，所以此时可以在`git`查找一下是否有人已经做过这些工作。
 
-经过搜索在`gitee`上面发现了别人做过的`patch`：https://gitee.com/wang--ge/LubanCat_SDK_For_OpenEuler
+经过搜索在`gitee`上面发现了别人做过的`patch`：https://gitee.com/wang--ge/LubanCat_SDK_For_OpenEuler[^1]
 [^1]: patch：基于已经发布的linux版本，别人做了修改以后可以生成patch补丁包，此时直接使用git am命令可以将补丁包应用到代码中，实现修改代码的目的。补丁包小巧方便快捷。
 
 我们将`patch`一一打入源码中，发现已经有了`lubancat`的`defconfig`和`dts`文件，接下来就是制作分区表文件了。
